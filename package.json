@@ -8,6 +8,16 @@
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nkhdo/vue-grid-layout.git"
+  },
+  "keywords": ["vue", "grid layout", "grid", "layout"],
+  "author": "Hoang Do <me@kaid.sh>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nkhdo/vue-grid-layout/issues"
+  },
   "dependencies": {
     "core-js": "^2.6.5",
     "vue": "^2.6.10"
