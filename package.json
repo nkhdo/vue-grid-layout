@@ -5,6 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "bundle": "vue-cli-service build --target lib --name GridLayout ./src/index.js",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit"
   },
