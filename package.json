@@ -1,5 +1,6 @@
 {
   "name": "@kaipkg/vue-grid-layout",
+  "description": "A lightweight grid layout system for VueJs, with draggable & resizable widgets",
   "version": "0.1.0",
   "scripts": {
     "serve": "vue-cli-service serve",
