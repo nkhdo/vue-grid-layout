@@ -1,11 +1,14 @@
 <template>
   <div class="v-grid-layout" :style="{ height: `${gridHeight}px` }">
+    <div class="v-resize-listener" ref="rl"></div>
     <slot/>
   </div>
 </template>
 
 <script>
+import debounce from 'lodash/debounce';
 import LayoutManager from '@/libs/LayoutManager';
+import erd from '@/utils/elementResizeDetector';
 
 export default {
   name: 'GridLayout',
@@ -43,6 +46,10 @@ export default {
   },
   mounted() {
     this.calculateBlockSize();
+    erd.listenTo(this.$refs.rl, debounce(this.calculateBlockSize.bind(this), 100));
+  },
+  beforeDestroy() {
+    erd.removeAllListeners(this.$refs.rl);
   },
   methods: {
     calculateBlockSize() {
@@ -63,5 +70,8 @@ export default {
 .v-grid-layout {
   position: relative;
   background-color: #f0f0f0;
+  .v-resize-listener {
+    width: 100%;
+  }
 }
 </style>
