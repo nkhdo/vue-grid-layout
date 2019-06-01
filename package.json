@@ -1,14 +1,14 @@
 {
   "name": "@kaipkg/vue-grid-layout",
   "description": "A lightweight grid layout system for VueJs, with draggable & resizable widgets",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "bundle": "vue-cli-service build --target lib --name GridLayout ./src/index.js",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
-    "preversion": "yarn test",
+    "preversion": "yarn test:unit",
     "postversion": "git push --tags && yarn bundle && yarn publish . --tag $npm_package_version && git push && echo \"Successfully released version $npm_package_version!\""
   },
   "files": [
@@ -19,7 +19,12 @@
     "type": "git",
     "url": "https://github.com/nkhdo/vue-grid-layout.git"
   },
-  "keywords": ["vue", "grid layout", "grid", "layout"],
+  "keywords": [
+    "vue",
+    "grid layout",
+    "grid",
+    "layout"
+  ],
   "author": "Hoang Do <me@kaid.sh>",
   "license": "ISC",
   "bugs": {
